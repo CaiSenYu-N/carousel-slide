@@ -15,7 +15,12 @@
 
 .carousel .img-ct {
     position: absolute;
-    overflow: hidden;
+}
+
+.carousel .img-ct {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .carousel .img-ct>li {
@@ -73,6 +78,6 @@
     cursor: pointer;
 }
 
-.carousel .bullet>li .active {
-    background-color: #ccc;
+.carousel .bullet .active {
+    background-color: #fff;
 }
