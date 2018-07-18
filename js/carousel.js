@@ -46,6 +46,13 @@ Carousel.prototype = {
               _this.playNext(index - _this.index)
             }
         })
+        //鼠标移入轮播停止
+        this.$imgCt.mouseenter(function() {
+          _this.stopAuto()
+        })
+        this.$imgCt.mouseleave(function() {
+          _this.autoPlay()
+        })
     },
 
     playNext: function(len) {
@@ -94,9 +101,9 @@ Carousel.prototype = {
         _this.playNext(1)
       },2000)
     },
-
+    //轮播停止
     stopAuto: function() {
-      clearINterval(this.autoClock)
+      clearInterval(this.autoClock)
     }
 }
 
